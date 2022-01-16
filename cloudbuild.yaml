@@ -1,6 +1,6 @@
-- name: "gcr.io/cloud-builders/docker"
-  args: ['build', '-t', 'gcr.io/containers-test-338320/randomapp1', '.']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ["push", "gcr.io/containers-test-338320/randomapp1"]
+  args: ['build', '-t', 'gcr.io/containers-test-338320/randomapp', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ["push", "gcr.io/containers-test-338320/randomapp"]
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['run', 'deploy', 'randomapp1', '--image', 'gcr.io/containers-test-338320/randomapp1', '--region', 'us-central1', '--platform', 'managed', --port, '80', '--allow-unauthenticated'   ]
+  args: ['run', 'deploy', 'randomapp1', '--image', 'gcr.io/containers-test-338320/randomapp', '--region', 'us-central1', '--platform', 'managed', --port, '80', '--allow-unauthenticated'   ]
