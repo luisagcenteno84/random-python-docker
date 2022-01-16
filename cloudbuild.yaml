@@ -1,4 +1,5 @@
-name: "gcr.io/cloud-builders/docker"
+steps:
+- name: "gcr.io/cloud-builders/docker"
   args: ["build", "-t", "gcr.io/containers-test-338320/random", "."]
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/containers-test-338320/random']
